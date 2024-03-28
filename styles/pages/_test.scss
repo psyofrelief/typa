@@ -1,0 +1,228 @@
+#page--test {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px 30px;
+
+  .stats-and-settings {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: $fz-250;
+    gap: 40px;
+    margin: 100px 0;
+    position: relative;
+
+    .modal {
+      align-items: flex-start;
+      background-color: rgba(0, 0, 0, 0.87);
+      display: flex;
+      justify-content: center;
+      left: 0px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+
+      span {
+        background-color: $gray-3;
+        margin: 0 0.5em;
+        padding: 0 1em;
+      }
+    }
+  }
+
+  .cont--paragraph {
+    color: $clr-text-secondary;
+    display: flex;
+    flex-direction: column;
+    font-size: $fz-750;
+    font-weight: $fw-regular;
+    letter-spacing: 0.06ch;
+    line-height: 1.2;
+    margin: 30px 0;
+    margin-top: 100px;
+    min-height: 4em;
+    overflow: hidden;
+    padding: 4px;
+    position: relative;
+    text-align: center;
+
+    .loading-paragraph {
+      align-self: center;
+      bottom: 0;
+      flex: 1;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 0;
+    }
+
+    .second-sentence {
+      color: $gray-5;
+    }
+  }
+}
+
+.base {
+  background: none;
+}
+
+.character {
+  background-color: $gray-3;
+}
+
+.caret {
+  position: relative;
+}
+.caret::after {
+  background-color: $accent-primary;
+  border-radius: 25%;
+  content: "";
+  display: flex;
+  height: 100%;
+  left: -0.1ch;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+
+.correct {
+  color: $green-1;
+  background-color: rgba(30, 250, 0, 0.1);
+  border-radius: 0.25em;
+}
+
+.incorrect {
+  color: $red-1;
+  background-color: rgba(250, 30, 0, 0.1);
+  border-radius: 0.25em;
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: $fz-250;
+  margin-top: 30px;
+  height: auto;
+
+  .timer {
+    padding: 0.3em 1.5em;
+    outline: 2px solid $gray-3;
+    font-size: $fz-500;
+    font-weight: $fw-light;
+    text-align: center;
+    border-radius: 25px;
+    background-color: $gray-1;
+  }
+
+  .btn-start-test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-2;
+    color: $clr-text-primary;
+    border: 1px solid $gray-3;
+    padding: 0.2em 0.8em;
+    min-width: 120px;
+    border-radius: 25px;
+    transition: all 0.2s ease-out;
+    font-weight: $fw-regular;
+
+    &:hover {
+      background-color: $accent-primary;
+      transform: scale(1.05);
+    }
+  }
+
+  .cont--btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 5px;
+  }
+  .btn-reset-test {
+    background-color: $accent-primary;
+    font-weight: $fw-regular;
+    border-radius: 25px;
+    min-width: 120px;
+    color: $clr-text-primary;
+    padding: 0.2em 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      background-color: $clr-bg-primary;
+      transform: scale(1.05);
+      outline: 3px solid $gray-3;
+    }
+  }
+}
+.cont--results {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 300px;
+  outline: 1px solid $gray-2;
+  border-radius: 4px;
+  font-weight: $fw-regular;
+
+  .results-row {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    padding: 0.6em 0.8em;
+    &:nth-child(2n) {
+      background-color: $gray-1;
+    }
+  }
+}
+
+.cont--settings {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 600px;
+  font-weight: $fw-regular;
+
+  .settings-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    padding: 0.6em 0.8em;
+
+    .settings-heading {
+      margin-right: auto;
+      color: $clr-text-primary;
+    }
+
+    .option {
+      background-color: none;
+      padding: 0.1em 0.5em;
+      border-radius: 20px;
+      color: $clr-text-secondary;
+      cursor: pointer;
+      padding: 0.2em 0.7em;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: $accent-primary;
+      }
+
+      &.active {
+        background-color: $gray-2;
+        color: $clr-text-primary;
+      }
+    }
+  }
+}

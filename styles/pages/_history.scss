@@ -1,0 +1,96 @@
+#page--history {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 50px;
+  padding: 10px 30px;
+  padding-bottom: 100px;
+
+  .label--select {
+    align-items: center;
+    align-self: end;
+    display: flex;
+    font-size: $fz-100;
+    gap: 0.7em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-bottom: 2em;
+
+    #select {
+      background-color: $clr-bg-secondary;
+      border: 2px solid $gray-3;
+      border-radius: 0.25em;
+      color: $clr-text-primary;
+      cursor: pointer;
+      display: flex;
+      padding: 0.4em 0em 0.3em 0.5em;
+    }
+  }
+
+  table {
+    background: $clr-bg-secondary;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+
+  .page-heading {
+    align-items: center;
+    align-self: center;
+    background-color: $gray-1;
+    outline: 1px solid $gray-2;
+    border-radius: 25px;
+    color: $clr-text-secondary;
+    display: flex;
+    font-size: $fz-500;
+    font-weight: 400;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 0.4em 0.8em;
+  }
+  .error-message {
+    align-items: center;
+    border: 1px solid $gray-2;
+    border-radius: 4px;
+    display: flex;
+    font-size: $fz-250;
+    gap: 10px;
+    letter-spacing: 0.1ch;
+    margin: auto;
+    padding: 0.6em 1em;
+    a {
+      color: $accent-secondary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  th {
+    border-bottom: 1px solid $gray-3;
+    color: $accent-secondary;
+    font-size: $fz-250;
+    font-weight: $fw-bold;
+    padding: 0.8em 1.5em;
+    text-align: left;
+  }
+  td {
+    color: $clr-text-secondary;
+    font-weight: $fw-regular;
+    padding: 0.8em 1.5em;
+  }
+  .disabled td {
+    color: #4f5f64;
+  }
+  tbody tr {
+    transition: background 0.25s ease;
+    &:nth-child(2n) {
+      background-color: $gray-2;
+    }
+  }
+  tbody tr:hover {
+    background: $accent-primary;
+  }
+}

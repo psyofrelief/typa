@@ -1,0 +1,96 @@
+#page--auth {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 100px;
+
+  .cont--switch-auth {
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0;
+  }
+}
+
+.switch {
+  --secondary-container: #3a4b39;
+  font-size: 17px;
+  height: 1.8em;
+  margin: 0 auto;
+  min-width: 3.7em;
+  position: relative;
+}
+
+.switch input {
+  display: none;
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.slider {
+  background-color: #313033;
+  border-radius: 30px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before {
+  background-color: #aeaaae;
+  border-radius: 20px;
+  bottom: 0.2em;
+  content: "";
+  height: 1.4em;
+  left: 0.2em;
+  position: absolute;
+  transition: 0.4s;
+  width: 1.4em;
+}
+
+input:checked + .slider::before {
+  background-color: $accent-primary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.9em);
+}
+
+.logo {
+  letter-spacing: 0.5ch;
+  margin: 1em 0;
+  font-weight: $fw-light;
+}
+
+.auth-tab {
+  align-items: center;
+  background-color: $gray-1;
+  border: none;
+  border-radius: 25px;
+  color: $gray-4;
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+  min-width: 100px;
+  padding: 0.3em 0.8em;
+  text-decoration: line-through;
+  transition: all 0.2s ease;
+
+  &.active {
+    background-color: $gray-2;
+    color: $clr-text-secondary;
+    text-decoration: none;
+  }
+}
