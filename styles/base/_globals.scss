@@ -1,0 +1,39 @@
+@import "typography";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+*:focus {
+  outline: 2px solid $accent-secondary;
+}
+body {
+  background-color: $clr-bg-primary;
+  color: $clr-text-primary;
+  font-family: "Rubik", sans-serif;
+  font-weight: $fw-regular;
+  line-height: 22pt;
+  letter-spacing: 0.2pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.responsiveness-error {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .responsiveness-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red-1;
+    color: $clr-text-primary;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+}

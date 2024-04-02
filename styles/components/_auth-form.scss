@@ -1,0 +1,120 @@
+//
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #824d74 inset; /* Change the color here */
+}
+
+// REGEX
+.regex-info {
+  background-color: $gray-2;
+  border-radius: 0.25em;
+  box-shadow: 5px 10px 15px black;
+  display: none;
+  font-size: $fz-100;
+  line-height: 1.3;
+  min-width: 300px;
+  outline: 2px solid $gray-3;
+  padding: 0.2em 0.4em;
+  position: absolute;
+  right: 1.8em;
+  z-index: 1;
+}
+
+.regex-symbol {
+  align-items: center;
+  background-color: $gray-4;
+  border-radius: 50%;
+  color: $clr-text-secondary;
+  display: flex;
+  font-size: $fz-100;
+  font-weight: $fw-regular;
+  justify-content: center;
+  line-height: 0.5;
+  padding: 0.5em 0.7em;
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
+
+.regex-symbol:hover .regex-info {
+  display: block;
+}
+
+// FORM
+#form--auth {
+  background-color: $clr-bg-secondary;
+  border: 2px solid $gray-2;
+  border-radius: 0.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: auto;
+  padding: 40px 30px;
+  position: relative;
+  width: 500px;
+
+  .brief {
+    font-size: $fz-250;
+    text-align: center;
+  }
+
+  .btn--submit {
+    background-color: $accent-primary;
+    border: none;
+    border-radius: 25px;
+    color: $clr-text-primary;
+    font-size: $fz-250;
+    margin-top: 1em;
+    padding: 0.4em;
+    transition: background-color 0.1s ease;
+
+    &:hover {
+      background-color: $clr-bg-primary;
+      outline: 3px solid $gray-3;
+    }
+  }
+
+  .error-message {
+    background-color: $red-1;
+    border-radius: 4px;
+    bottom: 25%;
+    color: $clr-text-primary;
+    font-size: 0.8rem;
+    padding: 0.2em 0.5em;
+    position: absolute;
+  }
+
+  input {
+    background-color: $clr-bg-primary;
+    border: none;
+    border-radius: 0.25em;
+    color: $clr-text-primary;
+    font-size: $fz-250;
+    margin-top: 4px;
+    outline: 1px solid $gray-3;
+    padding: 0.4em 0.7em;
+
+    &:focus {
+      outline: 2px solid $accent-primary;
+    }
+
+    &.invalid {
+      outline: 2px solid $red-1;
+    }
+
+    &.valid {
+      outline: 2px solid $green-1;
+    }
+
+    &::placeholder {
+      font-size: $fz-250;
+    }
+  }
+
+  label {
+    color: $clr-text-secondary;
+    display: flex;
+    flex-direction: column;
+    font-size: $fz-100;
+    position: relative;
+  }
+}

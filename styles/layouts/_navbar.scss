@@ -1,0 +1,103 @@
+#navbar {
+  align-items: center;
+  align-self: center;
+  background-color: $clr-bg-secondary;
+  border-radius: 100px;
+  display: flex;
+  font-size: $fz-250;
+  justify-content: space-between;
+  margin: 50px 10px;
+  padding: 20px 25px;
+
+  .nav-tab {
+    align-items: center;
+    background-color: $clr-bg-secondary;
+    border-radius: 25px;
+    color: $clr-text-secondary;
+    display: flex;
+    min-width: 100px;
+    justify-content: center;
+    padding: 0.3em 0.9em;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.active {
+      background-color: $clr-bg-primary;
+      color: $accent-secondary;
+      outline: 3px solid $gray-3;
+    }
+
+    &:hover {
+      background-color: $clr-bg-primary;
+      outline: 3px solid $gray-3;
+    }
+  }
+
+  .cont--nav-tabs {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-right: 100px;
+  }
+
+  .cont--auth-btns {
+    align-items: center;
+    display: flex;
+    margin-left: 100px;
+    gap: 15px;
+  }
+
+  .btn-auth {
+    align-items: center;
+    border-radius: 25px;
+    color: $clr-text-secondary;
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+    padding: 0.3em 0.9em;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $clr-bg-primary;
+      outline: 3px solid $gray-3;
+    }
+
+    &.active {
+      background-color: $clr-bg-primary;
+      color: $accent-secondary;
+      outline: 3px solid $gray-3;
+    }
+    &.signUp {
+      background-color: $accent-primary;
+      transition: transform 0.1s ease;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $clr-bg-primary;
+        color: $clr-text-secondary;
+        outline: 3px solid $gray-3;
+        transform: scale(1.05);
+      }
+    }
+    &.logout {
+      background-color: $accent-primary;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #navbar {
+    .cont--nav-tabs,
+    .cont--auth-btns {
+      margin: 0;
+      gap: 10px;
+    }
+
+    .cont--nav-tabs {
+      margin-right: 40px;
+    }
+  }
+}
