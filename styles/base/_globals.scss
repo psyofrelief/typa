@@ -4,6 +4,9 @@
 *:focus {
   outline: 2px solid $accent-secondary;
 }
+html {
+  background-color: $clr-bg-primary;
+}
 body {
   background-color: $clr-bg-primary;
   color: $clr-text-primary;
@@ -26,14 +29,19 @@ body {
   .responsiveness-error {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     background-color: $red-1;
     color: $clr-text-primary;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     z-index: 1;
+  }
+
+  body {
+    overflow: hidden;
   }
 }
