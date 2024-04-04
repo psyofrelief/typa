@@ -73,10 +73,7 @@ const Test = () => {
         "activePunctuationOption",
       );
       // Remove punctuation if punctuation is off
-      if (
-        storedPunctuationOption !== "true" &&
-        activePunctuationOption != true
-      ) {
+      if (storedPunctuationOption !== "true") {
         // Remove punctuation and convert to lowercase for each sentence
         modifiedSentences = modifiedSentences.map((sentence: string) =>
           sentence
@@ -325,7 +322,10 @@ const Test = () => {
     if (storedHighlightOption) {
       setActiveHighlightOption(storedHighlightOption);
     }
-    setActivePunctuationOption(storedPunctuationOption === "true");
+
+    if (storedPunctuationOption) {
+      setActivePunctuationOption(storedPunctuationOption === "true");
+    }
     if (storedTimerOption) {
       setActiveTimerOption(storedTimerOption === "true");
     }
